@@ -2,11 +2,7 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faEnvelope } from "@fortawesome/free-solid-svg-icons";
 import {
     faFacebook,
-    faGithub,
     faInstagram,
-    faLinkedin,
-    faMedium,
-    faStackOverflow,
 } from "@fortawesome/free-brands-svg-icons";
 import { Box, HStack } from "@chakra-ui/react";
 
@@ -57,7 +53,7 @@ const Navbar = () => {
                     alignItems="center"
                 >
                     <nav>
-                        <HStack spacing={8}>
+                        <HStack spacing={25}>
                             <a href="/#home" onClick={handleClick("home")}>Home</a>
                             <a href="/#aboutme" onClick={handleClick("aboutme")}>Aboute me</a>
                             <a href="/#portfolio" onClick={handleClick("portfolio")}>Portfolio</a>
@@ -65,7 +61,7 @@ const Navbar = () => {
                         </HStack>
                     </nav>
                     <nav>
-                        <HStack spacing={8}>
+                        <HStack spacing={25}>
                             {socialMedia.map((social => <a href={social.url}><FontAwesomeIcon icon={social.icon} size="2x" /></a>))}
                         </HStack>
                     </nav>
