@@ -4,6 +4,10 @@ a{
   padding: 5px;
 }
 
+.footerNavigation{
+  padding: 0px;
+}
+
 a:hover{
   background-color: #E85A4F;
   border-radius: 5px;

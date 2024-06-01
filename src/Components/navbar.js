@@ -44,7 +44,8 @@ const Navbar = () => {
             transitionProperty="transform"
             transitionDuration=".3s"
             transitionTimingFunction="ease-in-out"
-            backgroundColor="#EAE7DC">
+            backgroundColor="#EAE7DC"
+            zIndex="1000">
             <Box color="black" maxWidth="1280px" margin="0 auto">
                 <HStack
                     px={16}

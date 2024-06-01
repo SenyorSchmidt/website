@@ -6,6 +6,7 @@ import Portfolio from "./Components/portfolio"
 import ContactMe from './Components/contact';
 import { VStack } from '@chakra-ui/react';
 import { ChakraProvider } from "@chakra-ui/react";
+import Footer from './Components/footer';
 
 
 function App() {
@@ -16,6 +17,7 @@ function App() {
         <About />
         <Portfolio />
         <ContactMe />
+        <Footer/>
       </>
     </ChakraProvider>
   );
