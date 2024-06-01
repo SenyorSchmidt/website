@@ -30,7 +30,6 @@ const Footer = () => {
         }
     }
     return (
-
         <Box
             transitionProperty="transform"
             transitionDuration=".3s"
@@ -66,7 +65,7 @@ const Footer = () => {
 
                 </HStack>
             </Box>
-            <Heading size="sm" color="#8e8d8a">Copyright Waldemar Schmidt 2025</Heading>
+            <Heading size="sm" color="#8e8d8a">© Waldemar Schmidt 2024</Heading>
         </Box>
 
     )
