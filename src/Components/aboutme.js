@@ -4,7 +4,8 @@ import FullScreenSection from "./fullscreen";
 
 const greeting= "Hallo, ich bin Robert!";
 const bio1 = "Ich bin leidenschaftlicher Fotograf und habe Erfahrungen mit Hochzeiten, Geburtstagen etc.";
-
+const bio2 = "Ich wohne in Weiden, bin aber örtlich flexibel, somit ich Ihre schönsten Momente einfangen kann, wo Sie gerade sind."
+const bio3 = "Schauen Sie sich gerne auf meiner Website um und wenn Ihnen gefällt was Sie sehen, kontaktieren Sie mich gerne über das Kontaktformular am Ende der Seite!"
 
 const About = () => (
     <FullScreenSection
@@ -14,9 +15,10 @@ const About = () => (
         color="black">
         <VStack>
         <Avatar src="https://media.sproutsocial.com/uploads/2022/06/profile-picture.jpeg" size="2xl"/>
-            <Heading>{greeting}</Heading>
+            <Heading name="aboutme-section">{greeting}</Heading>
             <p>{bio1}</p>
-
+            <p>{bio2}</p>
+            <p>{bio3}</p>
         </VStack>
     </FullScreenSection>
 )
