@@ -24,8 +24,8 @@ const Portfolio = () => {
             spacing={8}
             backgroundColor="#EAE7DC"
             color="black">
-            <Heading as="h1" id="portfolio-section">
-                Mein Portfolio
+            <Heading as="h1" id="portfolio-section" color="#e85a4f">
+                <p>Mein Portfolio</p>
             </Heading>
             <Box
                 display="grid"

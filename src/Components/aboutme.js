@@ -12,10 +12,11 @@ const About = () => (
         justifyContent="center"
         alignItems="center"
         backgroundColor="#EAE7DC"
-        color="black">
+        color="black"
+        id="home-section">
         <VStack>
-        <Avatar src="https://media.sproutsocial.com/uploads/2022/06/profile-picture.jpeg" size="2xl"/>
-            <Heading name="aboutme-section">{greeting}</Heading>
+        <Avatar src="https://media.sproutsocial.com/uploads/2022/06/profile-picture.jpeg" size="2xl"  id="aboutme-section"/>
+            <Heading as="h1" color="#e85a4f">{greeting}</Heading>
             <p>{bio1}</p>
             <p>{bio2}</p>
             <p>{bio3}</p>
