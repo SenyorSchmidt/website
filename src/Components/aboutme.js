@@ -1,6 +1,7 @@
 import React from "react";
 import { Avatar, Heading, Box, VStack } from "@chakra-ui/react";
 import FullScreenSection from "./fullscreen";
+import profilePicture from "../Pictures/Profilbild.jpg";
 
 const greeting= "Hallo, ich bin Robert!";
 const bio1 = "Ich bin leidenschaftlicher Fotograf und habe Erfahrungen mit Hochzeiten, Geburtstagen etc.";
@@ -15,7 +16,7 @@ const About = () => (
         color="black"
         id="home-section">
         <VStack>
-        <Avatar src="https://media.sproutsocial.com/uploads/2022/06/profile-picture.jpeg" size="2xl"  id="aboutme-section"/>
+        <Avatar src={profilePicture} size="2xl"  id="aboutme-section"/>
             <Heading as="h1" color="#e85a4f">{greeting}</Heading>
             <p>{bio1}</p>
             <p>{bio2}</p>

@@ -9,11 +9,11 @@ import { Box, HStack } from "@chakra-ui/react";
 const socialMedia = [
     {
         icon: faEnvelope,
-        url: "mailto: robert.schmidt@bblabla.de"
+        url: "mailto: robert-schmidt98@t-online.de"
     },
     {
         icon: faInstagram,
-        url: "www.instagram.com"
+        url: "https://www.instagram.com/rob.s.photography/"
     },
     {
         icon: faFacebook,

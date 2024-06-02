@@ -10,7 +10,7 @@ const socialMedia = [
 
     {
         icon: faInstagram,
-        url: "www.instagram.com"
+        url: "https://www.instagram.com/rob.s.photography/"
     },
     {
         icon: faFacebook,
@@ -46,7 +46,7 @@ const Footer = () => {
                         <VStack spacing={2.5} alignItems="right">
                             <Heading size="lg">Robert Schmidt</Heading>
                             <p>Fotograf</p>
-                            <p>E-Mail: robert.schmidt@fotografie.de</p>
+                            <p>E-Mail: robert-schmidt98@t-online.de</p>
                             <p>Telefon: +49 171 243693</p>
                             <HStack spacing={15}>
                                 {socialMedia.map((social => <a href={social.url}><FontAwesomeIcon icon={social.icon} size="lg" /></a>))}
