@@ -18,13 +18,15 @@ import FullScreen from "./fullscreen";
 
 const ContactMe = () => {
 
-
     const formik = useFormik({
         initialValues: {
             firstName: "",
             email: "",
             subject: "",
             comment: ""
+        },
+        onSubmit: (values, actions) => {
+            alert("works!");
         },
         validationSchema: Yup.object({
             firstName: Yup.string().required("Bitte gib deinen Namen an"),
