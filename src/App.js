@@ -7,11 +7,21 @@ import ContactMe from './Components/contact';
 import { VStack } from '@chakra-ui/react';
 import { ChakraProvider } from "@chakra-ui/react";
 import Footer from './Components/footer';
+import { extendTheme } from '@chakra-ui/react'
+import '@fontsource/abril-fatface';
+import '@fontsource/prata';
+
+const theme = extendTheme({
+    fonts: {
+      heading: `Abril Fatface, serif`,
+      body: `'Prata', serif`,
+    },
+  })
 
 
 function App() {
   return (
-    <ChakraProvider>
+    <ChakraProvider theme={theme}>
       <>
         <Navbar />
         <About />

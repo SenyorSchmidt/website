@@ -1,6 +1,7 @@
 import React from "react";
 import { Avatar, Heading, Box, VStack, Image } from "@chakra-ui/react";
 import FullScreenSection from "./fullscreen";
+import { LazyLoadImage } from "react-lazy-load-image-component";
 
 import picture1 from "../Pictures/DSC00706.jpg"
 import picture2 from "../Pictures/DSC00778.jpg"
@@ -137,8 +138,8 @@ const Portfolio = () => {
             spacing={8}
             backgroundColor="#EAE7DC"
             color="black">
-            <Heading as="h1" id="portfolio-section" color="#e85a4f">
-                <p>Mein Portfolio</p>
+            <Heading as="h1" id="portfolio-section" color="#e85a4f" className="heading">
+                Mein Portfolio
             </Heading>
 
                 <Box
@@ -148,7 +149,7 @@ const Portfolio = () => {
                     alignItems="center"
                 >
                     {bilderVertikal.map((bild) =>
-                        <Image src={bild} ></Image>
+                        <LazyLoadImage src={bild} />
                     )}
                 </Box>
                 <Box

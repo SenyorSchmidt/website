@@ -1,5 +1,4 @@
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faEnvelope } from "@fortawesome/free-solid-svg-icons";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";   
 import {
     faFacebook,
     faInstagram,
@@ -55,7 +54,7 @@ const Footer = () => {
                     </footer>
                     <footer>
                         <VStack spacing={2.5} alignItems="left">
-                            <Heading size="md">Navigation</Heading>
+                            <Heading size="md" className="heading">Navigation</Heading>
                             <a href="/#home" onClick={handleClick("home")} className="footerNavigation">Home</a>
                             <a href="/#aboutme" onClick={handleClick("aboutme")} className="footerNavigation">Aboute me</a>
                             <a href="/#portfolio" onClick={handleClick("portfolio")} className="footerNavigation">Portfolio</a>
@@ -65,7 +64,7 @@ const Footer = () => {
 
                 </HStack>
             </Box>
-            <Heading size="sm" color="#8e8d8a">© Waldemar Schmidt 2024</Heading>
+            <p className="copyright">© Websitedesign by Waldemar Schmidt 2024</p>
         </Box>
 
     )

@@ -44,14 +44,14 @@ const ContactMe = () => {
             color="black"
         >
             <VStack w="1024px" p={32} alignItems="flex-start" onSubmit={formik.handleSubmit}>
-                <Heading as="h1" id="kontakt-section" color="#e85a4f">
+                <Heading as="h1" id="kontakt-section" className="heading" color="#e85a4f">
                     Contact me
                 </Heading>
                 <Box p={6} rounded="md" w="100%">
                     <form>
                         <VStack spacing={4}>
                             <FormControl isInvalid={formik.errors.firstName && formik.touched.firstName}>
-                                <FormLabel htmlFor="firstName">Name</FormLabel>
+                                <FormLabel htmlFor="firstName" className="label">Name</FormLabel>
                                 <Input
                                     id="firstName"
                                     name="firstName"
@@ -62,7 +62,7 @@ const ContactMe = () => {
                                 <FormErrorMessage>{formik.errors.firstName}</FormErrorMessage>
                             </FormControl>
                             <FormControl isInvalid={formik.errors.email && formik.touched.email}>
-                                <FormLabel htmlFor="email">E-Mailadresse</FormLabel>
+                                <FormLabel htmlFor="email" className="label">E-Mailadresse</FormLabel>
                                 <Input
                                     id="email"
                                     name="email"
@@ -74,7 +74,7 @@ const ContactMe = () => {
                                 <FormErrorMessage>{formik.errors.email}</FormErrorMessage>
                             </FormControl>
                             <FormControl isInvalid={formik.errors.subject && formik.touched.subject}>
-                                <FormLabel htmlFor="subject">Betreff</FormLabel>
+                                <FormLabel htmlFor="subject" className="label">Betreff</FormLabel>
                                 <Input
                                     id="subject"
                                     name="subject"
@@ -84,7 +84,7 @@ const ContactMe = () => {
                                     <FormErrorMessage>{formik.errors.subject}</FormErrorMessage>
                             </FormControl>
                             <FormControl isInvalid={formik.errors.comment && formik.touched.comment}>
-                                <FormLabel htmlFor="comment">Deine Anfrage</FormLabel>
+                                <FormLabel htmlFor="comment" className="label">Deine Anfrage</FormLabel>
                                 <Textarea
                                     id="comment"
                                     name="comment"
@@ -95,7 +95,7 @@ const ContactMe = () => {
                                 />
                                 <FormErrorMessage>{formik.errors.comment}</FormErrorMessage>
                             </FormControl>
-                            <Button type="submit" colorScheme="red" width="full">
+                            <Button type="submit" colorScheme="red" width="full" color="#EAE7DC">
                                 Submit
                             </Button>
                         </VStack>

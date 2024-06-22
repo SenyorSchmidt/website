@@ -2,6 +2,7 @@ a{
   text-decoration: none;
   color: black;
   padding: 5px;
+  font-family: "Prata", serif;
 }
 
 .footerNavigation{
@@ -11,5 +12,10 @@ a{
 a:hover{
   background-color: #E85A4F;
   border-radius: 5px;
+  color: #EAE7d8;
+}
+
+.copyright{
+  font-size: small;
   color: #EAE7d8;
 }
