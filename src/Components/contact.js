@@ -1,6 +1,7 @@
-import React, { useEffect } from "react";
+import React from "react";
 import { useFormik } from "formik";
 import {
+    AlertDialog,
     Box,
     Button,
     FormControl,
@@ -14,9 +15,35 @@ import {
 } from "@chakra-ui/react";
 import * as Yup from 'yup';
 import FullScreen from "./fullscreen";
-
+import emailjs from '@emailjs/browser';
 
 const ContactMe = () => {
+
+    const handleSubmit = (e) => {
+        e.preventDefault();
+
+        const serviceID = "service_y8re3o8"
+        const templateID = "template_msgbb1k"
+        const publicKey = "rol6mmsAOUq2aOpbW"
+
+        const templateParams = {
+            from_name: formik.values.firstName,
+            from_email: formik.values.email,
+            subject: formik.values.subject,
+            to_name: "Wowi",
+            message: formik.values.comment
+        };
+
+        emailjs.send(serviceID, templateID, templateParams, publicKey).then((response) => {
+            alert("Deine Anfrage wurde versendet!", response);
+            formik.values.firstName = "";
+            formik.values.email = "";
+            formik.values.subject =  "";
+            formik.values.comment = "";
+        }).catch((error) => {
+            alert("Es ist ein Fehler aufgetreten! Versuche es bitte erneut.", error)
+        })
+    }
 
     const formik = useFormik({
         initialValues: {
@@ -24,9 +51,6 @@ const ContactMe = () => {
             email: "",
             subject: "",
             comment: ""
-        },
-        onSubmit: (values, actions) => {
-            alert("works!");
         },
         validationSchema: Yup.object({
             firstName: Yup.string().required("Bitte gib deinen Namen an"),
@@ -43,7 +67,7 @@ const ContactMe = () => {
             spacing={8}
             color="black"
         >
-            <VStack w="1024px" p={32} alignItems="flex-start" onSubmit={formik.handleSubmit}>
+            <VStack w="1024px" p={32} alignItems="flex-start" onSubmit={handleSubmit}>
                 <Heading as="h1" id="kontakt-section" className="heading" color="#e85a4f">
                     Contact me
                 </Heading>
