@@ -120,7 +120,7 @@ const ContactMe = () => {
                                 <FormErrorMessage>{formik.errors.comment}</FormErrorMessage>
                             </FormControl>
                             <Button type="submit" colorScheme="red" width="full" color="#EAE7DC">
-                                Submit
+                                Senden
                             </Button>
                         </VStack>
                     </form>
