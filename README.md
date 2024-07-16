@@ -30,8 +30,8 @@ Contact form with useFormik and yup for client side validation of the inputs. E-
 ### `footer.js`
 Footer with contact information like phone number and e-mailadress on left side and navigation buttons on the right side
 
-### Design
-Navbar: Design uses #EAE7DC as background color and black as fontcolor. OnHover changes the background of the buttons to #e85a4f and fontcolor to #eae7dc.
-aboutme, portfolio, contact: Design uses #EAE7DC as background color and black as fontcolor. Headers are displayed in #e85a4f.
-Footer: Design uses #e85a4f as background color with #EAE7DC as the fontcolor.
-All: Font for headers is `Abril Fatface, serif` and for body `Prata, serif`.
+## Design
+- navbar: Design uses #EAE7DC as background color and black as fontcolor. OnHover changes the background of the buttons to #e85a4f and fontcolor to #eae7dc.
+- aboutme, portfolio, contact: Design uses #EAE7DC as background color and black as fontcolor. Headers are displayed in #e85a4f.
+- footer: Design uses #e85a4f as background color with #EAE7DC as the fontcolor.
+- All: Font for headers is `Abril Fatface, serif` and for body `Prata, serif`.
