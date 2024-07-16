@@ -64,7 +64,7 @@ const Footer = () => {
 
                 </HStack>
             </Box>
-            <p className="copyright">© Websitedesign by Waldemar Schmidt 2024</p>
+            <p className="copyright">© Websitedesign by Waldemar Schmidt 2024 | waldemar.schmidt.1@gmx.de</p>
         </Box>
 
     )

@@ -2,6 +2,7 @@ import React from "react";
 import { Avatar, Heading, Box, VStack, Image } from "@chakra-ui/react";
 import FullScreenSection from "./fullscreen";
 import { LazyLoadImage } from "react-lazy-load-image-component";
+import 'react-lazy-load-image-component/src/effects/blur.css';
 
 import picture1 from "../Pictures/DSC00706.jpg"
 import picture2 from "../Pictures/DSC00778.jpg"
@@ -149,7 +150,8 @@ const Portfolio = () => {
                     alignItems="center"
                 >
                     {bilderVertikal.map((bild) =>
-                        <LazyLoadImage src={bild} />
+                        <LazyLoadImage effect="blur" wrapperProps={{style: {transitionDelay: "1.5s"},
+                        }}src={bild} />
                     )}
                 </Box>
                 <Box
@@ -158,7 +160,8 @@ const Portfolio = () => {
                     gridGap={10}
                 >
                     {bilderHorizontal.map((bild) =>
-                        <Image src={bild} ></Image>
+                        <LazyLoadImage effect="blur" wrapperProps={{style: {transitionDelay: "1.5s"},
+                    }}src={bild} />
                     )}
                 </Box>
 

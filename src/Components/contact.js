@@ -1,7 +1,8 @@
 import React from "react";
 import { useFormik } from "formik";
 import {
-    AlertDialog,
+    Alert,
+    AlertIcon,
     Box,
     Button,
     FormControl,
@@ -16,6 +17,8 @@ import {
 import * as Yup from 'yup';
 import FullScreen from "./fullscreen";
 import emailjs from '@emailjs/browser';
+import swal from 'sweetalert';
+
 
 const ContactMe = () => {
 
@@ -34,15 +37,13 @@ const ContactMe = () => {
             message: formik.values.comment
         };
 
-        emailjs.send(serviceID, templateID, templateParams, publicKey).then((response) => {
-            alert("Deine Anfrage wurde versendet!", response);
-            formik.values.firstName = "";
-            formik.values.email = "";
-            formik.values.subject =  "";
-            formik.values.comment = "";
+        emailjs.send(serviceID, templateID, templateParams, publicKey).then(() => {
+            swal("Danke für deine Anfrage!", "Ich melde mich demnächst bei dir.", "success");
+            formik.resetForm()
         }).catch((error) => {
-            alert("Es ist ein Fehler aufgetreten! Versuche es bitte erneut.", error)
+            swal("Es ist ein Fehler aufgetreten!", "Versuche es bitte erneut.", "error")
         })
+
     }
 
     const formik = useFormik({
@@ -104,8 +105,8 @@ const ContactMe = () => {
                                     name="subject"
                                     value={formik.values.subject}
                                     {...formik.getFieldProps("subject")}
-                                    borderColor="#e85a4f"/>
-                                    <FormErrorMessage>{formik.errors.subject}</FormErrorMessage>
+                                    borderColor="#e85a4f" />
+                                <FormErrorMessage>{formik.errors.subject}</FormErrorMessage>
                             </FormControl>
                             <FormControl isInvalid={formik.errors.comment && formik.touched.comment}>
                                 <FormLabel htmlFor="comment" className="label">Deine Anfrage</FormLabel>
