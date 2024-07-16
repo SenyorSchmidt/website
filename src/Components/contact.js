@@ -70,7 +70,7 @@ const ContactMe = () => {
         >
             <VStack w="1024px" p={32} alignItems="flex-start" onSubmit={handleSubmit}>
                 <Heading as="h1" id="kontakt-section" className="heading" color="#e85a4f">
-                    Contact me
+                    Kontakt
                 </Heading>
                 <Box p={6} rounded="md" w="100%">
                     <form>
