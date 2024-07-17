@@ -15,10 +15,6 @@ const socialMedia = [
         icon: faInstagram,
         url: "https://www.instagram.com/rob.s.photography/"
     },
-    {
-        icon: faFacebook,
-        url: "www.facebook.com"
-    }
 ]
 
 const Navbar = () => {

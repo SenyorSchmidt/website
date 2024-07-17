@@ -1,8 +1,6 @@
 import React from "react";
 import { useFormik } from "formik";
 import {
-    Alert,
-    AlertIcon,
     Box,
     Button,
     FormControl,
@@ -25,15 +23,15 @@ const ContactMe = () => {
     const handleSubmit = (e) => {
         e.preventDefault();
 
-        const serviceID = "service_y8re3o8"
-        const templateID = "template_msgbb1k"
-        const publicKey = "rol6mmsAOUq2aOpbW"
+        const serviceID = "service_qywzscm"
+        const templateID = "template_sh54jks"
+        const publicKey = "2UjgF7mDeMhqzUNbI"
 
         const templateParams = {
             from_name: formik.values.firstName,
             from_email: formik.values.email,
             subject: formik.values.subject,
-            to_name: "Wowi",
+            to_name: "Robert",
             message: formik.values.comment
         };
 

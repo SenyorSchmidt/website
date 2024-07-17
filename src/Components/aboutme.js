@@ -14,13 +14,8 @@ const About = () => (
         alignItems="center"
         backgroundColor="#EAE7DC"
         color="black"
-        id="home-section">
+        id="aboutme-section">
         <VStack>
-            <Avatar src={profilePicture} size="2xl" id="aboutme-section" />
-            <Image src={profilePicture}
-                boxSize='500px'
-                objectFit='cover'
-            ></Image>
             <Image src={profilePicture}
                 boxSize='250px'
                 objectFit='cover'

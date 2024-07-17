@@ -1,6 +1,5 @@
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";   
 import {
-    faFacebook,
     faInstagram,
 } from "@fortawesome/free-brands-svg-icons";
 import { Box, HStack, VStack, Heading } from "@chakra-ui/react";
@@ -11,10 +10,7 @@ const socialMedia = [
         icon: faInstagram,
         url: "https://www.instagram.com/rob.s.photography/"
     },
-    {
-        icon: faFacebook,
-        url: "www.facebook.com"
-    }
+
 ]
 
 const Footer = () => {
