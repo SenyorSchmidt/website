@@ -3,10 +3,10 @@ import { Avatar, Heading, Box, VStack, Image } from "@chakra-ui/react";
 import FullScreenSection from "./fullscreen";
 import profilePicture from "../Pictures/Profilbild.jpg";
 
-const greeting = "Hallo, ich bin Robert!";
-const bio1 = "Ich bin leidenschaftlicher Fotograf und habe Erfahrungen mit Hochzeiten, Geburtstagen etc.";
-const bio2 = "Ich wohne in Weiden, bin aber örtlich flexibel, somit ich Ihre schönsten Momente einfangen kann, wo Sie gerade sind."
-const bio3 = "Schauen Sie sich gerne auf meiner Website um und wenn Ihnen gefällt was Sie sehen, kontaktieren Sie mich gerne über das Kontaktformular am Ende der Seite!"
+const greeting = "Hi, ich bin Robert und fotografiere leidenschaftlich seit 2017.";
+const bio1 = "Ich fotografiere alles von Nacht-, Portrait-, Street- und Landschaftsfotografie, egal ob digital oder analog."
+const bio2 = "Das Ziel ist mich in all diesen, als auch neuen Bereichen zu verbessern."
+const bio3 = "Und hiermit heiße ich dich herzlich willkommen auf meinem Web-Portfolio."
 
 const About = () => (
     <FullScreenSection

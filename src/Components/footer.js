@@ -44,6 +44,7 @@ const Footer = () => {
                             <p>Fotograf</p>
                             <p>E-Mail: robert-schmidt98@t-online.de</p>
                             <p>Telefon: +49 171 243693</p>
+                            <p>Christian-Seltmann-Str. 50, 92637 Weiden</p>
                             <HStack spacing={15}>
                                 {socialMedia.map((social => <a href={social.url}><FontAwesomeIcon icon={social.icon} size="lg" /></a>))}
                             </HStack>
