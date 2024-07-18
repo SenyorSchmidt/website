@@ -39,7 +39,8 @@ const Footer = () => {
                 >
                     <footer>
                         <VStack spacing={2.5} alignItems="right">
-                            <Heading size="lg">Robert Schmidt</Heading>
+                            <Heading size="lg">Impressum</Heading>
+                            <Heading size="md">Robert Schmidt</Heading>
                             <p>Fotograf</p>
                             <p>E-Mail: robert-schmidt98@t-online.de</p>
                             <p>Telefon: +49 171 243693</p>

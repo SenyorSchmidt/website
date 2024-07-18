@@ -41,7 +41,6 @@ const ContactMe = () => {
         }).catch((error) => {
             swal("Es ist ein Fehler aufgetreten!", "Versuche es bitte erneut.", "error")
         })
-
     }
 
     const formik = useFormik({
