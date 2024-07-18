@@ -1,7 +1,7 @@
 import React from "react";
 import { Avatar, Heading, Box, VStack, Image } from "@chakra-ui/react";
 import FullScreenSection from "./fullscreen";
-import profilePicture from "../Pictures/Profilbild.jpg";
+import profilePicture from "../pics_compressed/Profilbild.jpg";
 
 const greeting = "Hi, ich bin Robert und fotografiere leidenschaftlich seit 2017.";
 const bio1 = "Ich fotografiere alles von Nacht-, Portrait-, Street- und Landschaftsfotografie, egal ob digital oder analog."
