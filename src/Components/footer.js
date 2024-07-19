@@ -31,9 +31,9 @@ const Footer = () => {
             transitionTimingFunction="ease-in-out"
             backgroundColor="#e85a4f"
             >
-            <Box color="#eae7dc" maxWidth="1280px" margin="0 auto" w={[200, 300, 500, 800, 1280]}>
+            <Box color="#eae7dc" maxWidth="1280px" margin="0 auto">
                 <HStack
-                    px={200}
+                    px="10%"
                     py={0}
                     justifyContent="space-between"
                     alignItems="bottom"

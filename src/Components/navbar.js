@@ -3,9 +3,10 @@ import { faEnvelope } from "@fortawesome/free-solid-svg-icons";
 import {
     faInstagram,
 } from "@fortawesome/free-brands-svg-icons";
-import { Box, HStack, Flex } from "@chakra-ui/react";
+import { Box, HStack, VStack, IconButton } from "@chakra-ui/react";
 import { HamburgerIcon, CloseIcon } from "@chakra-ui/icons"
 import FullScreenSection from "./fullscreenNavbar";
+import { useState } from "react";
 
 const socialMedia = [
     {
@@ -31,6 +32,8 @@ const Navbar = () => {
         }
     }
 
+    const[display, changeDisplay] = useState("none")
+
     return (
         <FullScreenSection
             justifyContent="center"
@@ -47,10 +50,10 @@ const Navbar = () => {
                 translateY={0}
                 backgroundColor="#EAE7DC"
                 zIndex="1000">
-                <Box color="black" maxWidth="1280px" margin="auto auto" display={["none", "none", "center", "center"]} justifyContent="center" alignItems="center" >
+                <Box color="black" margin="auto auto" display={["none", "none", "center", "center"]} justifyContent="center" alignItems="center" >
                     <HStack
-                        //px={0}
-                        //py={4}
+                    //px={0}
+                    //py={4}
 
                     >
                         <nav>
@@ -67,6 +70,43 @@ const Navbar = () => {
                             </HStack>
                         </nav>
                     </HStack>
+                </Box>
+                <IconButton
+                    size="lg"
+                    icon={<HamburgerIcon />}
+                    display={["flex", "flex", "none", "none"]}
+                    backgroundColor="#EAE7DC"
+                    position="fixed"
+                    onClick={() => changeDisplay("flex")}
+                />
+                <Box
+                w="100vw"
+                backgroundColor="gray.50"
+                zIndex={20}
+                h="100vh"
+                position="fixed"
+                top="0"
+                left="0"
+                overflowY="auto"
+                display={display}
+                >
+                    <Box>
+                        <IconButton
+                        mt={5}
+                        ml={5}
+                        icon={<CloseIcon/>}
+                        backgroundColor="gray.50"
+                        onClick={() => changeDisplay("none")}/>
+                    </Box>
+                    <Box align="center">
+                        <VStack spacing={8} py={8}>
+                        <a href="/#home" onClick={handleClick("home")}>Home</a>
+                        <a href="/#aboutme" onClick={handleClick("aboutme")}>Aboute me</a>
+                        <a href="/#portfolio" onClick={handleClick("portfolio")}>Portfolio</a>
+                        <a href="/#kontakt" onClick={handleClick("kontakt")}>Kontakt</a>
+                        {socialMedia.map((social => <a href={social.url}><FontAwesomeIcon icon={social.icon} size="2x" /></a>))}
+                        </VStack>
+                    </Box>
                 </Box>
             </Box>
         </FullScreenSection>
