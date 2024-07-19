@@ -135,7 +135,7 @@ const Portfolio = () => {
         <FullScreenSection
             justifyContent="center"
             p={8}
-            alignItems="flex-start"
+            alignItems="center"
             spacing={8}
             backgroundColor="#EAE7DC"
             color="black">
@@ -145,23 +145,28 @@ const Portfolio = () => {
 
                 <Box
                     display="grid"
-                    gridTemplateColumns="repeat(3,minmax(0,1fr))"
+                    //gridTemplateColumns="repeat(3,minmax(min-content ,1fr))"
+                    gridAutoColumns="auto"
                     gridGap={10}
                     alignItems="center"
                 >
                     {bilderVertikal.map((bild) =>
-                        <LazyLoadImage wrapperProps={{style: {transitionDelay: "1.5s"},
-                        }}src={bild} />
+                    <Box>
+                        <LazyLoadImage src={bild} />
+                    </Box>
                     )}
                 </Box>
                 <Box
                     display="grid"
-                    gridTemplateColumns="repeat(2,minmax(0,1fr))"
+                    //gridTemplateColumns="repeat(2,minmax(min-content, 1fr))"
+                    gridTemplateColumns="auto"
                     gridGap={10}
+                    alignItems="center"
                 >
                     {bilderHorizontal.map((bild) =>
-                        <LazyLoadImage  wrapperProps={{style: {transitionDelay: "1.5s"},
-                    }}src={bild} />
+                    <Box>
+                        <LazyLoadImage src={bild} />
+                    </Box>
                     )}
                 </Box>
 

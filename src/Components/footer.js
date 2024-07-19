@@ -1,4 +1,4 @@
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";   
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import {
     faInstagram,
 } from "@fortawesome/free-brands-svg-icons";
@@ -29,8 +29,9 @@ const Footer = () => {
             transitionProperty="transform"
             transitionDuration=".3s"
             transitionTimingFunction="ease-in-out"
-            backgroundColor="#e85a4f">
-            <Box color="#eae7dc" maxWidth="1280px" margin="0 auto">
+            backgroundColor="#e85a4f"
+            >
+            <Box color="#eae7dc" maxWidth="1280px" margin="0 auto" w={[200, 300, 500, 800, 1280]}>
                 <HStack
                     px={200}
                     py={0}

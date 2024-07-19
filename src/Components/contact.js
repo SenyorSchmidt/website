@@ -65,65 +65,67 @@ const ContactMe = () => {
             spacing={8}
             color="black"
         >
-            <VStack w="1024px" p={32} alignItems="flex-start" onSubmit={handleSubmit}>
-                <Heading as="h1" id="kontakt-section" className="heading" color="#e85a4f">
-                    Kontakt
-                </Heading>
-                <Box p={6} rounded="md" w="100%">
-                    <form>
-                        <VStack spacing={4}>
-                            <FormControl isInvalid={formik.errors.firstName && formik.touched.firstName}>
-                                <FormLabel htmlFor="firstName" className="label">Name</FormLabel>
-                                <Input
-                                    id="firstName"
-                                    name="firstName"
-                                    value={formik.values.firstName}
-                                    {...formik.getFieldProps("firstName")}
-                                    borderColor="#e85a4f"
-                                />
-                                <FormErrorMessage>{formik.errors.firstName}</FormErrorMessage>
-                            </FormControl>
-                            <FormControl isInvalid={formik.errors.email && formik.touched.email}>
-                                <FormLabel htmlFor="email" className="label">E-Mailadresse</FormLabel>
-                                <Input
-                                    id="email"
-                                    name="email"
-                                    type="email"
-                                    value={formik.values.email}
-                                    {...formik.getFieldProps("email")}
-                                    borderColor="#e85a4f"
-                                />
-                                <FormErrorMessage>{formik.errors.email}</FormErrorMessage>
-                            </FormControl>
-                            <FormControl isInvalid={formik.errors.subject && formik.touched.subject}>
-                                <FormLabel htmlFor="subject" className="label">Betreff</FormLabel>
-                                <Input
-                                    id="subject"
-                                    name="subject"
-                                    value={formik.values.subject}
-                                    {...formik.getFieldProps("subject")}
-                                    borderColor="#e85a4f" />
-                                <FormErrorMessage>{formik.errors.subject}</FormErrorMessage>
-                            </FormControl>
-                            <FormControl isInvalid={formik.errors.comment && formik.touched.comment}>
-                                <FormLabel htmlFor="comment" className="label">Deine Anfrage</FormLabel>
-                                <Textarea
-                                    id="comment"
-                                    name="comment"
-                                    height={250}
-                                    value={formik.values.comment}
-                                    {...formik.getFieldProps("comment")}
-                                    borderColor="#e85a4f"
-                                />
-                                <FormErrorMessage>{formik.errors.comment}</FormErrorMessage>
-                            </FormControl>
-                            <Button type="submit" colorScheme="red" width="full" color="#EAE7DC">
-                                Senden
-                            </Button>
-                        </VStack>
-                    </form>
-                </Box>
-            </VStack>
+            <Box width="100%">
+                <VStack w="1024px" p={32} alignItems="flex-start" onSubmit={handleSubmit}>
+                    <Heading as="h1" id="kontakt-section" className="heading" color="#e85a4f">
+                        Kontakt
+                    </Heading>
+                    <Box p={6} rounded="md" w="100%" maxWidth={"800px"}>
+                        <form>
+                            <VStack spacing={4}>
+                                <FormControl isInvalid={formik.errors.firstName && formik.touched.firstName}>
+                                    <FormLabel htmlFor="firstName" className="label">Name</FormLabel>
+                                    <Input
+                                        id="firstName"
+                                        name="firstName"
+                                        value={formik.values.firstName}
+                                        {...formik.getFieldProps("firstName")}
+                                        borderColor="#e85a4f"
+                                    />
+                                    <FormErrorMessage>{formik.errors.firstName}</FormErrorMessage>
+                                </FormControl>
+                                <FormControl isInvalid={formik.errors.email && formik.touched.email}>
+                                    <FormLabel htmlFor="email" className="label">E-Mailadresse</FormLabel>
+                                    <Input
+                                        id="email"
+                                        name="email"
+                                        type="email"
+                                        value={formik.values.email}
+                                        {...formik.getFieldProps("email")}
+                                        borderColor="#e85a4f"
+                                    />
+                                    <FormErrorMessage>{formik.errors.email}</FormErrorMessage>
+                                </FormControl>
+                                <FormControl isInvalid={formik.errors.subject && formik.touched.subject}>
+                                    <FormLabel htmlFor="subject" className="label">Betreff</FormLabel>
+                                    <Input
+                                        id="subject"
+                                        name="subject"
+                                        value={formik.values.subject}
+                                        {...formik.getFieldProps("subject")}
+                                        borderColor="#e85a4f" />
+                                    <FormErrorMessage>{formik.errors.subject}</FormErrorMessage>
+                                </FormControl>
+                                <FormControl isInvalid={formik.errors.comment && formik.touched.comment}>
+                                    <FormLabel htmlFor="comment" className="label">Deine Anfrage</FormLabel>
+                                    <Textarea
+                                        id="comment"
+                                        name="comment"
+                                        height={250}
+                                        value={formik.values.comment}
+                                        {...formik.getFieldProps("comment")}
+                                        borderColor="#e85a4f"
+                                    />
+                                    <FormErrorMessage>{formik.errors.comment}</FormErrorMessage>
+                                </FormControl>
+                                <Button type="submit" colorScheme="red" width="full" color="#EAE7DC">
+                                    Senden
+                                </Button>
+                            </VStack>
+                        </form>
+                    </Box>
+                </VStack>
+            </Box>
         </FullScreen>
     );
 };

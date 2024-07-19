@@ -1,10 +1,11 @@
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faEnvelope } from "@fortawesome/free-solid-svg-icons";
 import {
-    faFacebook,
     faInstagram,
 } from "@fortawesome/free-brands-svg-icons";
-import { Box, HStack } from "@chakra-ui/react";
+import { Box, HStack, Flex } from "@chakra-ui/react";
+import { HamburgerIcon, CloseIcon } from "@chakra-ui/icons"
+import FullScreenSection from "./fullscreenNavbar";
 
 const socialMedia = [
     {
@@ -31,40 +32,44 @@ const Navbar = () => {
     }
 
     return (
-        <Box
-            position="fixed"
-            top={0}
-            left={0}
-            right={0}
-            translateY={0}
-            transitionProperty="transform"
-            transitionDuration=".3s"
-            transitionTimingFunction="ease-in-out"
+        <FullScreenSection
+            justifyContent="center"
+            p={8}
+            alignItems="flex-start"
+            spacing={8}
             backgroundColor="#EAE7DC"
-            zIndex="1000">
-            <Box color="black" maxWidth="1280px" margin="0 auto">
-                <HStack
-                    px={16}
-                    py={4}
-                    justifyContent="space-between"
-                    alignItems="center"
-                >
-                    <nav>
-                        <HStack spacing={25}>
-                            <a href="/#home" onClick={handleClick("home")}>Home</a>
-                            <a href="/#aboutme" onClick={handleClick("aboutme")}>Aboute me</a>
-                            <a href="/#portfolio" onClick={handleClick("portfolio")}>Portfolio</a>
-                            <a href="/#kontakt" onClick={handleClick("kontakt")}>Kontakt</a>
-                        </HStack>
-                    </nav>
-                    <nav>
-                        <HStack spacing={25}>
-                            {socialMedia.map((social => <a href={social.url}><FontAwesomeIcon icon={social.icon} size="2x" /></a>))}
-                        </HStack>
-                    </nav>
-                </HStack>
+            color="black">
+            <Box
+                position="fixed"
+                top={0}
+                left={0}
+                right={0}
+                translateY={0}
+                backgroundColor="#EAE7DC"
+                zIndex="1000">
+                <Box color="black" maxWidth="1280px" margin="auto auto" display={["none", "none", "center", "center"]} justifyContent="center" alignItems="center" >
+                    <HStack
+                        //px={0}
+                        //py={4}
+
+                    >
+                        <nav>
+                            <HStack spacing={25}>
+                                <a href="/#home" onClick={handleClick("home")}>Home</a>
+                                <a href="/#aboutme" onClick={handleClick("aboutme")}>Aboute me</a>
+                                <a href="/#portfolio" onClick={handleClick("portfolio")}>Portfolio</a>
+                                <a href="/#kontakt" onClick={handleClick("kontakt")}>Kontakt</a>
+                            </HStack>
+                        </nav>
+                        <nav>
+                            <HStack spacing={25}>
+                                {socialMedia.map((social => <a href={social.url}><FontAwesomeIcon icon={social.icon} size="2x" /></a>))}
+                            </HStack>
+                        </nav>
+                    </HStack>
+                </Box>
             </Box>
-        </Box>
+        </FullScreenSection>
     )
 }
 
