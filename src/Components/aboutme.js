@@ -16,7 +16,7 @@ const About = () => (
         color="black"
         id="aboutme-section"
         textAlign="center">
-        <VStack>
+        <VStack width="90%">
             <Image src={profilePicture}
                 boxSize='250px'
                 objectFit='cover'
