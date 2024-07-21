@@ -21,7 +21,8 @@ const socialMedia = [
 
 const Navbar = () => {
 
-    const handleClick = (anchor) => () => {
+    const handleClick = (anchor) => (e) => {
+        e.preventDefault()
         const id = `${anchor}-section`;
         const element = document.getElementById(id);
         if (element) {
@@ -30,6 +31,7 @@ const Navbar = () => {
                 block: "start"
             });
         }
+        changeDisplay("none")
     }
 
     const[display, changeDisplay] = useState("none")
@@ -58,10 +60,9 @@ const Navbar = () => {
                     >
                         <nav>
                             <HStack spacing={25}>
-                                <a href="/#home" onClick={handleClick("home")}>Home</a>
-                                <a href="/#aboutme" onClick={handleClick("aboutme")}>Aboute me</a>
-                                <a href="/#portfolio" onClick={handleClick("portfolio")}>Portfolio</a>
-                                <a href="/#kontakt" onClick={handleClick("kontakt")}>Kontakt</a>
+                                <a href="" onClick={handleClick("aboutme")}>Aboute me</a>
+                                <a href="" onClick={handleClick("portfolio")}>Portfolio</a>
+                                <a href="" onClick={handleClick("kontakt")}>Kontakt</a>
                                 {socialMedia.map((social => <a href={social.url}><FontAwesomeIcon icon={social.icon} size="2x" /></a>))}
                             </HStack>
                         </nav>
@@ -77,9 +78,9 @@ const Navbar = () => {
                 />
                 <Box
                 w="100vw"
-                backgroundColor="gray.50"
+                backgroundColor="#EAE7DC"
                 zIndex={20}
-                h="100vh"
+                h="100%"
                 position="fixed"
                 top="0"
                 left="0"
@@ -91,12 +92,11 @@ const Navbar = () => {
                         mt={5}
                         ml={5}
                         icon={<CloseIcon/>}
-                        backgroundColor="gray.50"
+                        backgroundColor="#EAE7DC"
                         onClick={() => changeDisplay("none")}/>
                     </Box>
-                    <Box align="center">
-                        <VStack spacing={8} py={8} align="center">
-                        <a href="/#home" onClick={handleClick("home")}>Home</a>
+                    <Box align="center" w="100%">
+                        <VStack spacing={8} py={8} align="auto">
                         <a href="/#aboutme" onClick={handleClick("aboutme")}>Aboute me</a>
                         <a href="/#portfolio" onClick={handleClick("portfolio")}>Portfolio</a>
                         <a href="/#kontakt" onClick={handleClick("kontakt")}>Kontakt</a>

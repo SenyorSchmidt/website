@@ -14,7 +14,8 @@ const socialMedia = [
 ]
 
 const Footer = () => {
-    const handleClick = (anchor) => () => {
+    const handleClick = (anchor) => (e) => {
+        e.preventDefault()
         const id = `${anchor}-section`;
         const element = document.getElementById(id);
         if (element) {
@@ -54,10 +55,9 @@ const Footer = () => {
                     <footer>
                         <VStack spacing={2.5} alignItems="left">
                             <Heading size="md" className="heading">Navigation</Heading>
-                            <a href="/#home" onClick={handleClick("home")} className="footerNavigation">Home</a>
-                            <a href="/#aboutme" onClick={handleClick("aboutme")} className="footerNavigation">Aboute me</a>
-                            <a href="/#portfolio" onClick={handleClick("portfolio")} className="footerNavigation">Portfolio</a>
-                            <a href="/#kontakt" onClick={handleClick("kontakt")} className="footerNavigation">Kontakt</a>
+                            <a href="" onClick={handleClick("aboutme")} className="footerNavigation">Aboute me</a>
+                            <a href="" onClick={handleClick("portfolio")} className="footerNavigation">Portfolio</a>
+                            <a href="" onClick={handleClick("kontakt")} className="footerNavigation">Kontakt</a>
                         </VStack>
                     </footer>
 
