@@ -144,28 +144,26 @@ const Portfolio = () => {
             </Heading>
 
                 <Box
-                    display="grid"
-                    //gridTemplateColumns="repeat(3,minmax(min-content ,1fr))"
-                    gridAutoColumns="auto"
+                    display={["90%", "90%", "grid", "grid"]}
+                    gridTemplateColumns="repeat(3,minmax(min-content ,1fr))"
                     gridGap={10}
                     alignItems="center"
                 >
                     {bilderVertikal.map((bild) =>
                     <Box>
-                        <LazyLoadImage src={bild} />
+                        <LazyLoadImage effect="blur" src={bild} />
                     </Box>
                     )}
                 </Box>
                 <Box
-                    display="grid"
-                    //gridTemplateColumns="repeat(2,minmax(min-content, 1fr))"
-                    gridTemplateColumns="auto"
+                    display={["90%", "90%", "grid", "grid"]}
+                    gridTemplateColumns="repeat(2,minmax(min-content, 1fr))"
                     gridGap={10}
                     alignItems="center"
                 >
                     {bilderHorizontal.map((bild) =>
                     <Box>
-                        <LazyLoadImage src={bild} />
+                        <LazyLoadImage effect="blur" src={bild} />
                     </Box>
                     )}
                 </Box>

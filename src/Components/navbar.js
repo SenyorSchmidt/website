@@ -49,12 +49,12 @@ const Navbar = () => {
                 right={0}
                 translateY={0}
                 backgroundColor="#EAE7DC"
-                zIndex="1000">
+                zIndex="1000"
+                display="fixed">
                 <Box color="black" margin="auto auto" display={["none", "none", "center", "center"]} justifyContent="center" alignItems="center" >
                     <HStack
                     //px={0}
                     //py={4}
-
                     >
                         <nav>
                             <HStack spacing={25}>
@@ -62,10 +62,6 @@ const Navbar = () => {
                                 <a href="/#aboutme" onClick={handleClick("aboutme")}>Aboute me</a>
                                 <a href="/#portfolio" onClick={handleClick("portfolio")}>Portfolio</a>
                                 <a href="/#kontakt" onClick={handleClick("kontakt")}>Kontakt</a>
-                            </HStack>
-                        </nav>
-                        <nav>
-                            <HStack spacing={25}>
                                 {socialMedia.map((social => <a href={social.url}><FontAwesomeIcon icon={social.icon} size="2x" /></a>))}
                             </HStack>
                         </nav>
@@ -99,7 +95,7 @@ const Navbar = () => {
                         onClick={() => changeDisplay("none")}/>
                     </Box>
                     <Box align="center">
-                        <VStack spacing={8} py={8}>
+                        <VStack spacing={8} py={8} align="center">
                         <a href="/#home" onClick={handleClick("home")}>Home</a>
                         <a href="/#aboutme" onClick={handleClick("aboutme")}>Aboute me</a>
                         <a href="/#portfolio" onClick={handleClick("portfolio")}>Portfolio</a>
